@@ -24,15 +24,15 @@ body {
 }
 
 .red {
-    color: coral;
+    color: rgb(73, 10, 10);
 }
 
 .green {
-    color: aquamarine;
+    color: rgb(14, 107, 76);
 }
 
 .yellow {
-    color: gold;
+    color: rgb(125, 110, 26);
 }
 
 
@@ -70,7 +70,7 @@ body {
 }
 
 #home a:hover {
-    background-color: coral;
+    background-color: rgb(10, 6, 75);
     color: black;
 }
 
