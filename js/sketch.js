@@ -56,7 +56,7 @@ function draw() {
   textAlign(CENTER);
   textSize(16);
   text(
-    "Navigate using the mouse to try and click the touch Orca :)",
+    "Navigate using the mouse to bully the Orca :)",
     width / 2,
     height - 20
   );
