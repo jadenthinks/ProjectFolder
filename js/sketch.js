@@ -21,7 +21,8 @@ function setup() {
       x: random(width),
       y: random(height),
       s: random(10, 50),
-    });}
+    });
+  }
   for (i = 0; i < n; i++) {
     s[i] = 100;
     x[i] = random(width);
@@ -54,18 +55,23 @@ function draw() {
   fill(255);
   textAlign(CENTER);
   textSize(16);
-  text('Navigate using the mouse to try and click the touch Orca :)', width/2, height - 20);
-  text('Find the space trash, I might grow', width/2, height - 40);
+  text(
+    "Navigate using the mouse to try and click the touch Orca :)",
+    width / 2,
+    height - 20
+  );
+  text("Find the space trash, I might grow", width / 2, height - 40);
 
-  for (let i = cs.length - 1; i >= 0; i--) { // Eat circles and grow
+  for (let i = cs.length - 1; i >= 0; i--) {
+    // Eat circles and grow
     let c = cs[i];
-    if (dist(oX + oS / 6, oY + oS / 6, c.x, c.y) < (oS / 6 + c.s / 2)) {
+    if (dist(oX + oS / 6, oY + oS / 6, c.x, c.y) < oS / 6 + c.s / 2) {
       oS += gF;
       cs.splice(i, 1);
     }
   }
-  fill('rgb(0,0,0)');
-  cs.forEach(c => ellipse(c.x, c.y, c.s, c.s)); // Draw circles
+  fill("rgb(0,0,0)");
+  cs.forEach((c) => ellipse(c.x, c.y, c.s, c.s)); // Draw circles
 }
 
 function move() {
